@@ -1,16 +1,16 @@
 {
 	"trains": [
 		{
-			"name": "Thalys",
+			"name": "Airbus",
 			"stops": [
 				{
-					"station": "Amsterdam",
+					"station": "AMS",
 					"status": "ON-TIME",
 					"arrival": "12:00pm",
 					"departure": "12:10pm"
 				},
 				{
-					"station": "Parijs",
+					"station": "NYC",
 					"status": "ON-TIME",
 					"arrival": "1:00pm",
 					"departure": "1:10pm"
@@ -18,16 +18,16 @@
 			]
 		},
 		{
-			"name": "Vliegende Hollander",
+			"name": "F16",
 			"stops": [
 				{
-					"station": "Kaatsheuvel",
+					"station": "WOE",
 					"status": "ON-TIME",
 					"arrival": "12:00pm",
 					"departure": "12:10pm"
 				},
 				{
-					"station": "Kaapstad",
+					"station": "SEA",
 					"status": "DELAYED",
 					"arrival": "1:00pm",
 					"departure": "1:10pm",
@@ -37,16 +37,16 @@
 			]
 		},
 		{
-			"name": "Intercity Direct",
+			"name": "Chinook",
 			"stops": [
 				{
-					"station": "Haarlem",
+					"station": "MMI",
 					"status": "ON-TIME",
 					"arrival": "12:00pm",
 					"departure": "12:10pm"
 				},
 				{
-					"station": "Bergen op Zoom",
+					"station": "DAM",
 					"status": "DELAYED",
 					"arrival": "1:00pm",
 					"departure": "1:10pm",
@@ -56,16 +56,16 @@
 			]
 		},
 		{
-			"name": "Transsib",
+			"name": "Boeing 747",
 			"stops": [
 				{
-					"station": "Moskou",
+					"station": "MOS",
 					"status": "ON-TIME",
 					"arrival": "12:00pm",
 					"departure": "12:10pm"
 				},
 				{
-					"station": "Wuhan",
+					"station": "WUH",
 					"status": "CANCELLED",
 					"arrival": "1:00pm",
 					"departure": "1:10pm",
@@ -73,7 +73,7 @@
 					"delayedDeparture": "9:17pm"
 				},
 				{
-					"station": "Vladivostok",
+					"station": "BRU",
 					"status": "DELAYED",
 					"arrival": "1:00pm",
 					"departure": "1:10pm",
