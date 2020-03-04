@@ -15,7 +15,7 @@ metadata:
 spec:
   type: LoadBalancer
   externalIPs:
-  - 172.16.240.159
+  - 172.16.240.163
   selector:
     app: flight-schedule
   ports:
@@ -47,11 +47,11 @@ spec:
       - name: flight-schedule
         image: $DOCKER_IMAGE_NAME:$BUILD_NUMBER
         ports:
-        - containerPort: 8081
+        - containerPort: 8080
         livenessProbe:
           httpGet:
             path: /
-            port: 8081
+            port: 8080
           initialDelaySeconds: 15
           timeoutSeconds: 1
           periodSeconds: 10
