@@ -1,0 +1,60 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: flight-ns
+  labels:
+    name: flight-ns
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: flight-schedule-service
+  namespace: flight-ns
+spec:
+  type: LoadBalancer
+  externalIPs:
+  - 172.16.240.159
+  selector:
+    app: flight-schedule
+  ports:
+  - protocol: TCP
+    port: 8080
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flight-schedule-deployment
+  namespace: flight-ns
+  labels:
+    app: flight-schedule
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: flight-schedule
+      track: stable
+  template:
+    metadata:
+      labels:
+        app: flight-schedule
+        track: stable
+    spec:
+      containers:
+      - name: flight-schedule
+        image: $DOCKER_IMAGE_NAME:$BUILD_NUMBER
+        ports:
+        - containerPort: 8080
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 8080
+          initialDelaySeconds: 15
+          timeoutSeconds: 1
+          periodSeconds: 10
+        resources:
+          requests:
+            cpu: 200m
